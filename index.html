@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Converter</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <h1>Конвертер времени</h1>
-    <div>
-        <label for="ukrTime">Введите украинское время (часы, минуты): </label>
-        <input type="text" id="ukrTime" name="ukrTime">
+    <div class="form-container">
+        <h2>Реєстрація</h2>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="username">Логін:</label>
+                <input type="text" id="username" name="username" placeholder="Введіть логін" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна скринька:</label>
+                <input type="email" id="email" name="email" placeholder="Введіть електронну пошту">
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Введіть пароль">
+            </div>
+            <div class="form-group">
+                <button id="register-btn" type="submit">Зареєструватися</button>
+            </div>
+        </form>
     </div>
-    <br>
-    <div>
-        <label for="ukrTime">Введите японское время (часы, минуты): </label>
-        <input type="text" id="japTime" name="japTime">
-    </div>
-
-    <button onclick="convertToJap()">Укр -> Яп</button>
-    <button onclick="convertToUkr()">Яп -> Укр</button>
-    <button onclick="clearFields()">Щчистить поля</button>
 
     <script src="script.js"></script>
 </body>
